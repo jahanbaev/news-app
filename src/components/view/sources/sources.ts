@@ -23,7 +23,7 @@ class Sources {
     });
 
     document.querySelector(".sources")?.append(fragment);
-    (document.querySelector(".source__item-name") as HTMLElement).click();
+    // (document.querySelector(".source__item-name") as HTMLElement).click();
   }
 }
 
