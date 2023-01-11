@@ -12,7 +12,6 @@ export class AppView {
 
   drawNews(data: ArticlesType) {
     this.news.draw(data);
-    console.log(data);
   }
 
   drawSources(data: SourcesType) {
