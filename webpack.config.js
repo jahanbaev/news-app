@@ -5,7 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const baseConfig = {
     devServer: {
-        compress: true,
+        compress: false,
         port: 9000,
     },
     entry: path.resolve(__dirname, './src/index.ts'),
