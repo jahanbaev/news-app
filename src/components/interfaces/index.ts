@@ -1,4 +1,3 @@
-
 export interface ArticlesType {
     articles: IArticle[];
 }
@@ -14,8 +13,8 @@ export interface IArticle {
     description: string;
     publishedAt: string;
     source: {
-        id: string;
-        name: string;
+      id: string;
+      name: string;
     };
     title: string;
     url: string;
@@ -30,5 +29,4 @@ export interface ISource {
     language: string;
     name: string;
     url: string;
-    
 }
