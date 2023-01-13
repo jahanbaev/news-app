@@ -1,11 +1,7 @@
 import AppController from "../controller/controller";
-import { ArticlesType, SourcesType } from "../interfaces";
+import { ArticlesType, SourcesType, IApp } from "../interfaces";
 import { AppView } from "../view/appView";
 
-interface IApp {
-  controller: AppController;
-  view: AppView;
-}
 
 class App implements IApp {
   controller: AppController;
@@ -13,9 +9,10 @@ class App implements IApp {
   constructor() {
     this.controller = new AppController();
     this.view = new AppView();
+  
   }
 
-  start() {
+  start(): void {
     document
       .querySelector(".sources")!
       .addEventListener("click", (e) =>

@@ -5,6 +5,7 @@ import Sources from "./sources/sources";
 export class AppView {
   news: News;
   sources: Sources;
+  
   constructor() {
     this.news = new News();
     this.sources = new Sources();

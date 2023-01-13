@@ -2,18 +2,18 @@ import { ArticlesType } from "../../interfaces";
 import "./news.css";
 
 class News {
-  draw(data: ArticlesType) {
-    const news =
+  draw(data: ArticlesType): void {
+    const news: ArticlesType =
       data.articles.length >= 10
         ? data.articles.filter((_item: object, idx: number) => idx < 10)
         : data.articles;
 
-    const fragment = document.createDocumentFragment();
+    const fragment: DocumentFragment = document.createDocumentFragment();
     const newsItemTemp = document.querySelector(
       "#newsItemTemp"
     ) as HTMLTemplateElement;
 
-    news.forEach((item, idx) => {
+    news.forEach((item: ArticlesType, idx):void => {
       const newsClone = newsItemTemp.content.cloneNode(true) as HTMLDivElement;
 
       if (idx % 2) {

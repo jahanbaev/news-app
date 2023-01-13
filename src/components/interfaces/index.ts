@@ -6,16 +6,17 @@ export interface SourcesType {
     sources: ISource[];
 }
 
+export interface Isource {
+    id: string;
+    name: string;
+  }
 export interface IArticle {
     length: number;
     author: string;
     context: string;
     description: string;
     publishedAt: string;
-    source: {
-      id: string;
-      name: string;
-    };
+    source: Isource;
     title: string;
     url: string;
     urlToImage: string;
@@ -30,3 +31,8 @@ export interface ISource {
     name: string;
     url: string;
 }
+
+export interface IApp {
+    controller: AppController;
+    view: AppView;
+  }

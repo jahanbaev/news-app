@@ -1,8 +1,6 @@
 import { ArticlesType, SourcesType } from "../interfaces";
 
 class Loader {
-  baseLink: string;
-  options: object;
 
   constructor(baseLink: string, options: object) {
     this.baseLink = baseLink;
@@ -31,7 +29,7 @@ class Loader {
   }
 
   makeUrl(options: { [key: string]: string }, endpoint: string): string {
-    const urlOptions = { ...this.options, ...options };
+    const urlOptions: { [key: string]: string } = { ...this.options, ...options };
     let url = `${this.baseLink}${endpoint}?`;
 
     Object.keys(urlOptions).forEach((key) => {
